@@ -1,3 +1,4 @@
+
 class SortingRobot:
     def __init__(self, l):
         """
@@ -100,14 +101,14 @@ class SortingRobot:
 
         """
         self.set_light_on()
-        while self._light == "ON":
+        while self.light_is_on():
             self.set_light_off()
             while self.can_move_left():
                 self.move_left()
             while self.can_move_right():
                 self.swap_item()
                 self.move_right()
-                if self.compare_item() >= 0:
+                if self.compare_item() > 0:
                     self.swap_item()
                     self.move_left()
                     self.swap_item()
@@ -115,7 +116,6 @@ class SortingRobot:
                     self.set_light_on()
 
                 else:
-
                     self.move_left()
                     self.swap_item()
                     self.move_right()
