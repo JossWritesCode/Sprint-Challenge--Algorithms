@@ -11,13 +11,12 @@ a)  a = 0
       a = a + n * n
 ```
 
-
 ```
-b)  sum = 0
+b)  sum = 0 O(1)
     for i in range(n):
-      j = 1
+      j = 1 (O1)
       while j < n:
-        j *= 2
+        j *= 2 O2
         sum += 1
 ```
 
